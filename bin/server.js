@@ -88,6 +88,14 @@ Object.keys(ranges).forEach(function(addr) {
 argv.range = ranges
 
 
+if (argv.silent) {
+
+  // Currently is only `logger.info` in use.
+  argv.logger = {
+    info: function() {}
+  }
+}
+
 
 var server = sheep(argv)
 
