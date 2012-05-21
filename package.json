@@ -31,5 +31,9 @@
   },
   "engines": {
     "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tellnes/sheep.git"
   }
 }
