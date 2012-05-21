@@ -22,6 +22,9 @@ function escapeRegExp(text) {
 function sheep(opts) {
   opts = opts || {}
 
+  opts.enable = opts.enable || {}
+  opts.enable.xforward = opts.xforward
+
   var server = new EventEmitter()
     , datafile = opts.datafile ? path.resolve(opts.datafile) : process.cwd() + '/sheep.json'
     , rootnameRegexp = opts.rootname ? new RegExp(escapeRegExp(opts.rootname) + '$') : null
